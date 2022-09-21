@@ -50,3 +50,15 @@ quantityUpBertrandite.addEventListener('click', function(){
     removeButtonBertrandite.addEventListener('click', function(){
         cartItemBertrandite.remove()
     })
+//total price
+let totalPrice = document.querySelector('#total-price')
+let total = 0
+let totalLimestone = 0
+let totalBertrandite = 0
+let checkout = document.querySelector('.btn-checkout')
+    checkout.addEventListener('click', function(){
+        totalLimestone = quantityLimestone * 15
+        totalBertrandite = quantityBertrandite * 45
+        total = totalLimestone + totalBertrandite
+        totalPrice.textContent = `$${total}.00`    
+    })
