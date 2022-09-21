@@ -1,27 +1,52 @@
 //minus and plus variables
-let quantityDown = document.querySelector('#quantity-down')
-let quantityUp = document.querySelector('#quantity-up')
-let totalQuantity = document.querySelector('#quantity-number')
-let quantity = 0
+let quantityDownLimestone = document.querySelector('.quantity-down-limestone')
+let quantityUpLimestone = document.querySelector('.quantity-up-limestone')
+let totalQuantityLimestone = document.querySelector('#quantity-number-limestone')
+let quantityLimestone = 0
 //remove variables
-let removeButton = document.querySelector('.remove')
-let cartItem = document.querySelector('.cart-item')
+let removeButtonLimestone = document.querySelector('#remove-limestone')
+let cartItemLimestone = document.querySelector('#cart-item-limestone')
 //minus
-    quantityDown.addEventListener('click', function(){
-    if (quantity >= 1){
-        quantity -= 1
+quantityDownLimestone.addEventListener('click', function(){
+    if (quantityLimestone >= 1){
+        quantityLimestone -= 1
     } else {
-        quantity = 0
+        quantityLimestone = 0
     }
-    totalQuantity.textContent = `${quantity}`
+    totalQuantityLimestone.textContent = `${quantityLimestone}`
 })
 //plus
-quantityUp.addEventListener('click', function(){
-    quantity += 1
-    totalQuantity.textContent = `${quantity}`
+quantityUpLimestone.addEventListener('click', function(){
+    quantityLimestone += 1
+    totalQuantityLimestone.textContent = `${quantityLimestone}`
 })
 //remove working
-    removeButton.addEventListener('click', function(){
-        cartItem.remove()
+removeButtonLimestone.addEventListener('click', function(){
+    cartItemLimestone.remove()
+})
+// again but for bertrandite
+let quantityDownBertrandite = document.querySelector('.quantity-down-bertrandite')
+let quantityUpBertrandite = document.querySelector('.quantity-up-bertrandite')
+let totalQuantityBertrandite = document.querySelector('#quantity-number-bertrandite')
+let quantityBertrandite = 0
+let removeButtonBertrandite = document.querySelector('#remove-bertrandite')
+let cartItemBertrandite = document.querySelector('#cart-item-bertrandite')
+
+//minus
+    quantityDownBertrandite.addEventListener('click', function(){
+    if (quantityBertrandite >= 1){
+        quantityBertrandite -= 1
+    } else {
+        quantityBertrandite = 0
+    }
+    totalQuantityBertrandite.textContent = `${quantityBertrandite}`
+})
+//plus
+quantityUpBertrandite.addEventListener('click', function(){
+    quantityBertrandite += 1
+    totalQuantityBertrandite.textContent = `${quantityBertrandite}`
+})
+//remove working
+    removeButtonBertrandite.addEventListener('click', function(){
+        cartItemBertrandite.remove()
     })
-    
